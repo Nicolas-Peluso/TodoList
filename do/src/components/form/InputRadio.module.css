@@ -1,0 +1,11 @@
+.Container{
+    background-color: rgb(255, 255, 255);
+    padding: 8px;
+    margin: 20px;
+    font-size: 2rem;
+    display: block;   
+}
+
+.Container input[type="radio"]{
+    display: inline-block;
+}

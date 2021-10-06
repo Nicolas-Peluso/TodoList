@@ -1,0 +1,21 @@
+.Container{
+    font-size: 1.4em;
+    font-family: serif, Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    background-color: rgb(230, 230, 230);
+    width: 30%;
+    height: auto;
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.Container h1{
+    text-align: center;
+    font-family: serif, Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    margin: 8px;
+}

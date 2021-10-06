@@ -1,0 +1,23 @@
+.form{
+    padding: 20px;
+    font-family: serif, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    background-color: rgb(189, 189, 189);
+    display: block;
+    width: 100%;
+    height: auto;
+
+}
+
+.form input[type="text"]{
+    margin: auto;
+    margin-bottom: 20px;
+}
+.form button{
+    padding: 10px;
+    font-size: 1.2rem;
+    color: wheat;
+    background-color: blue;
+    outline: none;
+    cursor: pointer;
+}
