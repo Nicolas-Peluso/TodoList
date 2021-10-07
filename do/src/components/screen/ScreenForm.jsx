@@ -5,7 +5,7 @@ import Style from "./ScreenForm.module.css"
 
 function ScreenForm({ setValue, options }) {
     const [text, setText] = React.useState("")
-    const [important, setimportant] = React.useState('low')
+    const [important, setimportant] = React.useState('#0CC52F')
 
     function handleSubmit(e) {
         e.preventDefault()

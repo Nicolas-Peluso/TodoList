@@ -8,16 +8,18 @@ function PrincipalScreen() {
         const hasLocal = localStorage.getItem("ListaToDo")
         return hasLocal ? JSON.parse(hasLocal) : [
             {
-                Value: "tarefa padrão",
+                Value: "Voce pode Adicionar Novas tarefas",
                 id: 0,
                 feito: false,
-                important: ''
+                important: '#0CC52F'
             }
         ]
     })
+
     React.useEffect(() => {
         localStorage.setItem("ListaToDo", JSON.stringify(options))
     }, [options])
+
     return (
         <div className={Style.Container}>
             <h1>Lista de afazeres</h1>

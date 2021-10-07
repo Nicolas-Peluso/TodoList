@@ -1,4 +1,5 @@
 import React from 'react'
+import ScreenTarefas from '../screen/ScreenTarefas'
 import Style from "./InputCheckBox.module.css"
 
 function InputCheckBox({ options, setValue }) {
@@ -12,7 +13,7 @@ function InputCheckBox({ options, setValue }) {
             setValue([...options], options[i].feito = false)
     }
 
-    function handleExcluir(tarefa) {
+    async function handleExcluir(tarefa) {
         setValue(options.filter(option => option.id === tarefa ? false : option))
     }
 
@@ -20,26 +21,16 @@ function InputCheckBox({ options, setValue }) {
 
         <div className={Style.container}>
             {options && options.map((option, i) => (
-                <>
-                    <span key={option.id + 2} >
-                        <button onClick={() => handleExcluir(option.id)}
-                            className={Style.button}>X</button>
-                    </span>
+                <div className={Style.tarefa}>
+                    <button onClick={() => handleExcluir(option.id)}
+                        className={Style.button}>❌</button>
 
-                    <label htmlFor={option.id} className={Style.label}
-                        style={{
-                            background: option.important === 'low' ? 'green' : 'red'
-                        }}
-                        key={option.id + 3}
-                    >
-                        {option.feito ? <s>{option.Value}</s> : option.Value}
-                    </label>
-
+                    <ScreenTarefas option={option} />
                     <input type="checkbox" value={option.Value}
                         onChange={(e) => handleChange(e, i)}
                         checked={option.feito} key={option.id} id={option.id}
                         className={Style.input} /> <br />
-                    <br /></>
+                </div>
             ))} </div>
 
     )
